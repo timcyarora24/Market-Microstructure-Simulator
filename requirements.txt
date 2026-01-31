@@ -4,3 +4,4 @@ pandas
 plotly
 matplotlib
 scipy
+statsmodels

@@ -10,12 +10,12 @@ from execution.lob import LimitOrderBook
 def run_vwap_experiment():
     # Execution parameters
     t_quantity = 50000
-    p = 0.05  # participation rate
+    p = 0.01  # participation rate
     time_horizon = 390
     p_ref = 100.0
     
     # Market microstructure parameters
-    impact_factor = 0.0001  # price impact per share
+    impact_factor = 0.000001  # price impact per share
     mean_reversion_speed = 0.1  # how fast price reverts
     replenish_rate = 3.0  # liquidity replenishment events per minute
     
@@ -24,7 +24,7 @@ def run_vwap_experiment():
     
     # === POISSON SIMULATIONS ===
     print("Running Poisson simulations...")
-    for run in range(200):
+    for run in range(400):
         # Initialize LOB with dynamic mid-price
         mid_price = p_ref
         asks = [(mid_price + 0.01 + i*0.01, 10_000) for i in range(10)]
@@ -90,10 +90,10 @@ def run_vwap_experiment():
     
     # === HAWKES SIMULATIONS ===
     print("Running Hawkes simulations...")
-    for run in range(200):
+    for run in range(400):
         # Initialize LOB
         mid_price = p_ref
-        asks = [(mid_price + 0.01 + i*0.01, 10_000) for i in range(10)]
+        asks = [(mid_price + 0.01 + i*0.01, 10_000) for i in range(20)]
         lob = LimitOrderBook(asks.copy())
         
         # Generate events - Hawkes for trades

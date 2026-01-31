@@ -3,11 +3,15 @@
 Poisson vs Hawkes Order Flow and VWAP Execution Impact
 
 Overview
+
 This project studies how order arrival dynamics affect intraday price formation and execution costs in a simplified market microstructure setting.
 
 Specifically, it compares:
+
 Poisson order arrivals (memoryless, independent flow)
+
 Hawkes order arrivals (self-exciting, clustered flow)
+
 and evaluates their impact on:
 Order flow clustering and price dynamics
 
@@ -95,11 +99,17 @@ Project Structure
 
 Market-Microstructure-Simulator/
 ├── dashboard/        # Streamlit app (microstructure visualization)
+
 ├── execution/        # LOB and VWAP execution logic
+
 ├── simulations/      # Poisson and Hawkes processes
+
 ├── main.py           # VWAP execution experiments
+
 ├── requirements.txt
+
 └── README.md
+
 └── vwap_slippage
 
 Limitations & Extensions

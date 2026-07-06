@@ -128,6 +128,7 @@ An interactive Streamlit dashboard visualizes the microstructure mechanisms:
 The dashboard focuses on mechanisms, while execution cost analysis is handled separately to maintain clarity.
 👉 Live Dashboard: https://market-microstructure-simulator.streamlit.app/
 
+
 Project Structure
 
 Market-Microstructure-Simulator/

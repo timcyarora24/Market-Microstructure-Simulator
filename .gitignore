@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# large/raw real-data downloads shouldn't be committed
+data/*_trades.csv
+data/calibration_diagnostics.png
+
+.DS_Store
+.ipynb_checkpoints/
